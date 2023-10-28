@@ -7,9 +7,8 @@ is presented in Section 2. Finally a few example programs in the language are gi
 The implementation of the compiler for nanoC is split into 4 assignments as follows: 
 
 
-1. Assignment 2: Lexical Analyzer for nanoC using Flex. The lexical grammar specification is given. 
-## To run the code: 
-Clone the programs contained in Assignment_2 folder.
+## 1. Assignment 2: Lexical Analyzer for nanoC using Flex. The lexical grammar specification is given. 
+### To run the code: 
 In the terminal run : flex 9_A2.l which will create a .lex.yy.c file.
 
 Then run: 
@@ -19,8 +18,11 @@ Finally run the command - Make all
 ('Make all' will take the test code written in 9_A2.nc which contains the test code of binary search and automate the process the tokenization of the program code present in 9_A2.nc). The automation happens due the code written in the Makefile.
 
 
-2. Assignment 3: Parser for nanoC using Bison. 
-
+### 2. Assignment 3: Parser for nanoC using Bison. 
+Go to the path containing Assignment_3. 
+i) The assignment contains the Makefile. Type command : "Makefile build" to make a lex.yy.c file. 
+ii) To test the working of the parser, I have included the testfile "9_A3.nc". To test this file use the command : "./parser < 9_A3.nc" . 
+These commands will help to check the validity of the grammer defined under nanoC with the bison parser.
 
 3. Assignment 4: Machine-Independent Code Generator for nanoC using syntax-directed translation with Bison. Three-Address (intermediate) Code (TAC) used as target of translation is explained here.
 
