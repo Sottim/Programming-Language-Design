@@ -14,14 +14,14 @@ RET 				"return"
 VOID 				"void"
 
 /* Identifier */
-IDENTIFIER 			[a-zA-Z][a-zA-Z0-9]*
+IDENTIFIER 			[a-z_A-Z][a-zA-Z_0-9]*
 
 /* Constants */
-INTEGER_CONSTANT 	(\+|-)?[1-9][0-9]*|(0)[0-9]*?
-CHARACTER_CONSTANT 	'([^'\\]|\\[\\'\"?abfnrtv])'
+INTEGER_CONSTANT 	0|[1-9][0-9]*
+CHARACTER_CONSTANT 	[']([^\'\\\n]|[\'\"?\\abfnrtv])*[']
 
 /* String Literal */
-STRING_LITERAL 		["][^\"\\\n][\n]*(\\0)?([^\"\\\n]*[\n]*)?["]
+STRING_LITERAL 		["]([^\"\\\n]|[\'\"?\\abfnrtv])*["]
 
 /* Punctuator */
 PUNCTUATOR			(\[|\]|\(|\)|\{|\}|->|&|\*|\+|-|\/|%|!|\?|<|>|<=|>=|==|!=|&&|\|\||=|\:|;|\,)
@@ -48,8 +48,8 @@ WS					[ \t\n]
 {CHARACTER_CONSTANT} 	{ printf("<CHARACTER CONSTANT,%s>",yytext);/* Literal Rule */ }
 {STRING_LITERAL} 		{ printf("<STRING LITERAL,%s>", yytext);/* Literal Rule */ } 
 {PUNCTUATOR} 			{ printf("<PUNCTUATOR,%s>", yytext); /* Statement Rule */ }
-{MULTI_LINE_COMM} 		{ printf("<MULTI LINE COMMENT, %s>", yytext);/* Multiple Comment Rule */ }
-{SINGLE_LINE_COMM} 		{ printf("<SINGLE LINE COMMENT, %s>", yytext);/* Single Comment Rule */ }
+{MULTI_LINE_COMM} 		{ printf("MULTI LINE COMMENT\n"); }
+{SINGLE_LINE_COMM} 		{ printf("SINGLE LINE COMMENT\n");}
 {WS}        			{ /* Ignore white-space */ }
 .						{ printf("<INVALID TOKEN>"); exit(1); }
 
