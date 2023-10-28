@@ -7,9 +7,10 @@ is presented in Section 2. Finally a few example programs in the language are gi
 The implementation of the compiler for nanoC is split into 4 assignments as follows: 
 
 
-## 1. Assignment 2: Lexical Analyzer for nanoC using Flex. The lexical grammar specification is given. 
-### To run the code: 
-In the terminal run : flex 9_A2.l which will create a .lex.yy.c file.
+### 1. Assignment 2: Lexical Analyzer for nanoC using Flex. The lexical grammar specification is given. 
+#### Procedure to run the code : 
+In the terminal 
+run : flex 9_A2.l which will create a .lex.yy.c file.
 
 Then run: 
 gcc lex.yy.c 9_A2.c which will create a a.out executable.
@@ -19,12 +20,17 @@ Finally run the command - Make all
 
 
 ### 2. Assignment 3: Parser for nanoC using Bison. 
+
 Go to the path containing Assignment_3. 
 i) The assignment contains the Makefile. Type command : "Makefile build" to make a lex.yy.c file. 
 ii) To test the working of the parser, I have included the testfile "9_A3.nc". To test this file use the command : "./parser < 9_A3.nc" . 
 These commands will help to check the validity of the grammer defined under nanoC with the bison parser.
 
-3. Assignment 4: Machine-Independent Code Generator for nanoC using syntax-directed translation with Bison. Three-Address (intermediate) Code (TAC) used as target of translation is explained here.
+### 3. Assignment 4: Machine-Independent Code Generator for nanoC using syntax-directed translation with Bison. 
+
+Three-Address (intermediate) Code (TAC) used as target of translation is explained here.
 
 
-4. Assignment 5: Target Code Generator for nanoC by simple code generation by table lookup. The target processor is taken to be x86 and a subset of its assembly language is presented here for use.
+### 4. Assignment 5: Target Code Generator for nanoC by simple code generation by table lookup. 
+
+The target processor is taken to be x86 and a subset of its assembly language is presented here for use.
