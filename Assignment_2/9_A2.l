@@ -21,7 +21,8 @@ INTEGER_CONSTANT 	0|[1-9][0-9]*
 CHARACTER_CONSTANT 	[']([^\'\\\n]|[\'\"?\\abfnrtv])*[']
 
 /* String Literal */
-STRING_LITERAL 		["]([^\"\\\n]|[\'\"?\\abfnrtv])*["]
+S_CHAR              [^"\n]
+STRING_LITERAL 		\"{S_CHAR}*\"
 
 /* Punctuator */
 PUNCTUATOR			(\[|\]|\(|\)|\{|\}|->|&|\*|\+|-|\/|%|!|\?|<|>|<=|>=|==|!=|&&|\|\||=|\:|;|\,)
