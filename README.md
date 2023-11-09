@@ -13,16 +13,17 @@ In the terminal
 run : flex 9_A2.l which will create a .lex.yy.c file.
 
 Then run: 
-gcc lex.yy.c 9_A2.c which will create a a.out executable.
+gcc lex.yy.c 9_A2.c which will create a 'a.out' executable. 
+Run ./a.out then enter your test code to convert program into tokens. 
 
-Finally run the command - Make all
-('Make all' will take the test code written in 9_A2.nc which contains the test code of binary search and automate the process the tokenization of the program code present in 9_A2.nc). The automation happens due the code written in the Makefile.
+Finally run the command - make all
+('make all' will take the test code written in 9_A2.nc which contains the test code of binary search and automate the process the tokenization of the program code present in 9_A2.nc). The automation happens due the code written in the Makefile.
 
 
 ### 2. Assignment 3: Parser for nanoC using Bison. 
 
 Go to the path containing Assignment_3. 
-i) The assignment contains the Makefile. Type command : "Makefile build" to make a lex.yy.c file. 
+i) The assignment contains the Makefile. Type command : "makefile build" to make a lex.yy.c file. 
 ii) To test the working of the parser, I have included the testfile "9_A3.nc". To test this file use the command : "./parser < 9_A3.nc" . 
 These commands will help to check the validity of the grammer defined under nanoC with the bison parser.
 
