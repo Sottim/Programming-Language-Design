@@ -1,0 +1,7 @@
+type-specifier
+direct-declarator
+declarator
+type-specifier
+direct-declarator
+declarator
+Error: syntax error on '''

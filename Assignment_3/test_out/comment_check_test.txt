@@ -1,0 +1,4 @@
+type_specifier
+direct_declarator
+declarator
+Error: syntax error on '/'

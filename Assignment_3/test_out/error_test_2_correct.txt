@@ -1,0 +1,8 @@
+type-specifier
+direct-declarator
+declarator
+type-specifier
+pointer
+direct-declarator
+declarator
+Error: syntax error on '"'
