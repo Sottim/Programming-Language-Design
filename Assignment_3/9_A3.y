@@ -211,7 +211,8 @@ selection_statement: IF OP_PARENTHESIS expression CL_PARENTHESIS statement {prin
 iteration_statement: FOR OP_PARENTHESIS expression_opt SEMICOLON expression_opt SEMICOLON expression_opt CL_PARENTHESIS statement {printf("iteration_statement\n");}
                     ;
                 
-jump_statement: RET expression_opt SEMICOLON
+jump_statement: RET expression_opt SEMICOLON {printf("jump_statement\n");}
+;
 
 translation_unit: external_declaration {printf("translation_unit\n");}
                 | translation_unit external_declaration {printf("translation_unit\n");}
